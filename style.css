@@ -1,0 +1,174 @@
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.start-page {
+  height: 100vh;
+  overflow: hidden;
+}
+
+.hide_pageFireWork {
+  display: none;
+}
+
+.start-page .text_error {
+  width: 100%;
+  height: 13%;
+  background-color: rgb(230, 230, 230);
+  font-size: 18px;
+  display: none;
+}
+
+.text_error h5 {
+  margin: 0;
+  padding: 15px 0 0 10px;
+  font-weight: normal;
+}
+
+.start-page .show_text_erroor {
+  display: block;
+}
+
+canvas {
+  position: relative;
+}
+
+.start-page .next_page {
+  position: absolute;
+  bottom: 20px;
+  right: 60px;
+  width: 38px;
+  height: 38px;
+  background-color: rgb(5, 5, 5);
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.start-page .next_page i,
+.section .back_page i {
+  color: rgb(170, 170, 170);
+  padding: 12px 0 0 9px;
+  animation: animation-arrow 3s ease-in-out infinite;
+}
+
+.start-page .next_page:hover {
+  background-color: rgba(10, 10, 10, 0.555);
+}
+
+.start-page .hide_btn_next_page {
+  display: none;
+}
+
+.section {
+  position: relative;
+  height: 100vh;
+  background: url('img/christmas_fon.jpg') no-repeat center;
+  background-size: 100% 120%;
+  align-items: center;
+  justify-content: center;
+  display: none;
+}
+
+.show_page_section {
+  display: flex;
+}
+
+.section .back_page {
+  position: absolute;
+  top: 20px;
+  left: 30px;
+  width: 38px;
+  height: 38px;
+  background-color: rgba(5, 5, 5, 0.562);
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.section .back_page:hover {
+  background-color: rgba(20, 20, 20, 0.555);
+}
+.envelope {
+  position: relative;
+  height: 189px;
+  width: 330px;
+  z-index: 1;
+  transition: .5s;
+  background-color: #dbc58b;
+  cursor: pointer;
+  transform: rotate(-20deg);
+}
+
+.rotate_envelope {
+  transform: rotate(0deg);
+}
+
+.envelope_top img {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  transform-origin: bottom;
+  transition: .5s;
+  z-index: 5;
+}
+
+.paper_greeting {
+  position: absolute;
+  text-align: center;
+  height: 180px;
+  left: 10%;
+  right: 10%;
+  width: 80%;
+  bottom: 0px;
+  background-color: rgb(248, 228, 160);
+  border-radius: 2px;
+  z-index: 3;
+}
+
+.paper_greeting p {
+  font-family: 'Dancing Script', cursive;
+  font-size: 20px;
+  font-weight: 600;
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+
+.paper_greeting .text_greeting {
+  padding: 0 15px 0 15px;
+  font-weight: normal;
+  font-size: 19px;
+  margin-top: 10px;
+}
+
+.show_paper_greeting {
+  transform: translateY(-100px);
+  transition: 1s;
+}
+
+.paper_greeting-close {
+  transform: rotateX(180deg);
+  z-index: 6;
+}
+
+
+.envelope_body img {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.52);
+  z-index: 4;
+}
+
+@keyframes animation-arrow {
+
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(10px, 0)
+  }
+}
