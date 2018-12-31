@@ -7,10 +7,17 @@
     <title>New Year</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
-    <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Tangerine" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Tangerine|Lato|Roboto" rel="stylesheet">
   </head>
   <body>
-    <section class="start-page">
+    <section class="welcome_page">
+      <div class="content">
+        <h1>Happy New Year!</h1>
+        <button type="button" id="btn-start">Thanks</button>
+      </div>
+    </section>
+
+    <section class="start-page show_pageFireWork">
       <div class="text_error">
         <h5><strong>Error:</strong> Your mobile phone does not have enough
           width.</h5>
@@ -19,6 +26,7 @@
 
       <canvas id="canvas"></canvas>
       <a href="#!" class="next_page"><i class="fas fa-chevron-right"></i></a>
+      <audio loop src="./audio/fireworksSound.mp3"></audio>
     </section>
 
     <div class="section">

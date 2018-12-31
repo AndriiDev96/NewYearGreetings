@@ -6,6 +6,8 @@ const btnBackPage = document.querySelector(".back_page")
 const pageFirework = document.querySelector('.start-page');
 const btnNextPage = document.querySelector('.next_page');
 const audioPause = document.querySelector('audio');
+//console.log(audioPause);
+
 
 function readEnvelope(){
   swohLetter.classList.toggle("paper_greeting-close");

@@ -1,20 +1,9 @@
+const btnStart = document.querySelector("#btn-start");
 const pageStart = document.querySelector('.start-page');
+const welcomePage = document.querySelector('.welcome_page');
+const audio = document.querySelector('audio');
 
-function Sound(src) {
-  this.sound = document.createElement("audio");
-  this.sound.src = src;
-  this.sound.setAttribute("loop", "loop");
-  this.sound.setAttribute("controls", "none");
-  this.sound.style.display = "none";
-  pageStart.append(this.sound);
-  this.play = function(){
-    setTimeout(() => {
-      this.sound.play();
-    }, 2300);
-  }
-}
-
-(function(){
+function showFirework(){
   const textAboutError = document.querySelector('.text_error');
   const btnNextPage = document.querySelector('.next_page');
   let widthWindow = innerWidth;
@@ -24,10 +13,12 @@ function Sound(src) {
     btnNextPage.classList.add('hide_btn_next_page');
   }else{
     drawFirework();
-    startSound = new Sound("./audio/fireworksSound.mp3");
-    startSound.play();
+    setTimeout(() => {
+      audio.play();
+    },2300);
   }
-})();
+};
+
 function drawFirework() {
   const canvas = document.querySelector('#canvas');
   canvas.width = innerWidth;
@@ -163,3 +154,9 @@ function drawFirework() {
     }
   }
 }
+
+  btnStart.addEventListener("click", () => {
+    welcomePage.style.display = "none";
+    pageStart.classList.remove('show_pageFireWork');
+    showFirework();
+  });

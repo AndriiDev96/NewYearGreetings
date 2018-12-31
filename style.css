@@ -5,9 +5,39 @@ body {
   padding: 0;
 }
 
+.welcome_page{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(19, 19, 19);
+  font-size: 40px;
+  font-family: 'Roboto', sans-serif;
+  letter-spacing: 10px;
+  text-transform: uppercase;
+  color: rgb(209, 209, 209);
+}
+
+.welcome_page .content button{
+  margin-left: 40%;
+  padding: 10px 25px 10px 25px;
+  background: none;
+  color: rgb(209, 209, 209);
+  font-family: 'Roboto', sans-serif;
+  letter-spacing: 1px;
+  font-weight: bold;
+  text-transform: uppercase;
+  border: 2px solid rgb(209, 209, 209);
+  cursor: pointer;
+}
+ 
 .start-page {
   height: 100vh;
   overflow: hidden;
+}
+
+.show_pageFireWork {
+  display: none;
 }
 
 .hide_pageFireWork {
